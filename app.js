@@ -25,6 +25,17 @@ downBtn.addEventListener('click', () => {
 
 // Проверяем условия, если функция приняла up, то к индексу градиентов (в нашем случае их 4 - 0, 1, 2, 3) прибавляется 1, так мы проверяем еще одно условие, что Индекс = Числу градиентов, если условие срабатывает, индекс обнуляется.
 
+document.addEventListener('keydown', event => {
+    if(event.key === 'ArrowUp') {
+        changeSlide('up')
+    } else if (event.key === 'ArrowDown') {
+        changeSlide('down')
+    }
+})
+
+
+
+
 function changeSlide(direction) {
     if (direction === 'up') {
         activeSlideIndex++
